@@ -39,6 +39,12 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    activegraph (10.1.0)
+      activemodel (>= 4.0)
+      activesupport (>= 4.0)
+      i18n (!= 1.8.8)
+      orm_adapter (~> 0.5.0)
+      sorted_set
     activejob (6.1.2.1)
       activesupport (= 6.1.2.1)
       globalid (>= 0.3.6)
@@ -102,10 +108,16 @@ GEM
     mini_portile2 (2.5.0)
     minitest (5.14.3)
     msgpack (1.4.2)
+    neo4j-ruby-driver (1.7.4)
+      activesupport
+      ffi
+      recursive-open-struct
+      zeitwerk (>= 2.1.10)
     nio4r (2.5.5)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     pg (1.2.3)
     public_suffix (4.0.6)
     puma (5.2.1)
@@ -148,6 +160,8 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rbtree (0.4.4)
+    recursive-open-struct (1.1.3)
     regexp_parser (2.0.3)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
@@ -164,6 +178,10 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (2.3.1)
+    set (1.0.1)
+    sorted_set (1.0.3)
+      rbtree
+      set (~> 1.0)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -204,11 +222,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activegraph (>= 10.0.0)
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  neo4j-ruby-driver
   pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)

@@ -6,6 +6,7 @@ volumes:
   db_data:
   gem_cache:
   shared_data:
+  neo:
 services:
   redis:
     image: redis:4.0-alpine
@@ -51,3 +52,21 @@ services:
       RAILS_ENV: development
     depends_on:
       - db
+  neo:
+    image: neo4j:4.0
+    container_name: neo
+    networks:
+      - development
+    volumes:
+      - neo:/conf
+      - neo:/data
+      - neo:/import
+      - neo:/logs
+      - neo:/plugins
+    environment: 
+      - NEO4J_dbms_memory_pagecache_size=1G
+      - NEO4J_dbms.memory.heap.initial_size=1G
+      - NEO4J_dbms_memory_heap_max__size=1G
+    ports:
+      - 7474:7474
+      - 7687:7687

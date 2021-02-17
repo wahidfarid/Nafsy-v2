@@ -22,6 +22,10 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'activegraph', '>= 10.0.0' # For example, see https://rubygems.org/gems/activegraph/versions for the latest versions
+# gem 'neo4j-java-driver', '~> 1.7', '>= 1.7.4'
+gem 'neo4j-ruby-driver' # For example, see https://rubygems.org/gems/neo4j-ruby-driver/versions for the latest versions
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
