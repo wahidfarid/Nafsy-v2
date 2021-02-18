@@ -14,9 +14,9 @@ module App
     config.load_defaults 6.1
 
 
-    config.neo4j.driver.url = 'bolt://neo:7687'
-    config.neo4j.driver.username = 'neo4j'
-    config.neo4j.driver.password = 'password'
+    config.neo4j.driver.url = ENV['NEO4J_URL']
+    config.neo4j.driver.username = ENV['NEO4J_USERNAME']
+    config.neo4j.driver.password = ENV['NEO4J_PASSWORD']
     config.neo4j.driver.encryption = false
 
     # Configuration for the application, engines, and railties goes here.
