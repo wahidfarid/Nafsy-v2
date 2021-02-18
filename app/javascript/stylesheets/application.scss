@@ -2,6 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import "trix/dist/trix";
+
 @layer base {
     h1 {
         @apply text-5xl;

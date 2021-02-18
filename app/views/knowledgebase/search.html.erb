@@ -1,13 +1,26 @@
 <h1 class="mb-8">Knowledgebase - Search Results</h1>
-<h2 class="size-xl">Title results:</h2>
+<h2 class="text-3xl">Title results:</h2>
 <%
     if @title_result.empty?
 %>
-        <h2>No Results</h2>
+        <h2 class="text-gray-400 my-2 ml-4">No Results</h2>
 <%
     else
         @title_result.each { |r| %>
-            <%= link_to r.title,  "knowledgebase/"+r.uuid %>
+            <%= link_to r.title,  "knowledgebase/"+r.uuid, class: "hover:text-blue-500 text-xl my-2 ml-4 block" %>
+        <% }
+    end
+%>
+
+<h2 class="text-3xl">Content results:</h2>
+<%
+    if @content_result.empty?
+%>
+        <h2 class="text-gray-400 my-2 ml-4">No Results</h2>
+<%
+    else
+        @content_result.each { |r| %>
+            <%= link_to r.title,  "knowledgebase/"+r.uuid, class: "hover:text-blue-500 text-xl my-2 ml-4 block" %>
         <% }
     end
 %>

@@ -14,5 +14,16 @@ class KnowledgebaseController < ApplicationController
   end
 
   def edit
+    @p = Point.find(request.params['id'])
+  end
+
+  def update
+    @p = Point.find(request.params['id'])
+    @params = params.permit(:title, :content)
+    @p.title = @params['title'] if !@params['title'].nil?
+    @p.content = @params['content'] if !@params['content'].nil?
+    @p.save
+
+    render "show"
   end
 end

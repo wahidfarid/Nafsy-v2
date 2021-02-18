@@ -1,2 +1,12 @@
-<h1>Knowledgebase#edit</h1>
-<p>Find me in app/views/knowledgebase/edit.html.erb</p>
+<%= form_with url: "/knowledgebase/"+@p.uuid, method: :patch do |form| %>
+
+<header class="flex justify-between">
+    <input type="text" name="title" class="block w-full border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black mb-8 mr-8 text-3xl" placeholder="" value="<%= @p.title %>">
+    <div>
+        <%= form.submit "Update", class:"bg-green-400 hover:bg-green-300 focus:outline-none text-white py-2 px-4 rounded-md size-xl" %>
+    </div>
+</header>
+
+<%= form.rich_text_area :content, value: @p.content %>
+
+<% end %>
