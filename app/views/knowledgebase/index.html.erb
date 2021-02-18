@@ -1,0 +1,11 @@
+<h1>Knowledgebase</h1>
+
+<div class="container w-full h-full flex flex-col justify-center items-center ">
+    <h4 class="text-l text-gray-600">There are currently <%= @count %> entries listed</h4>
+    <h2 class="text-2xl m-4">Search the knowledgebase</h2>
+
+    <%= form_with url: "/search", class: "w-1/2 ", method: :get do |form| %>
+        <%= form.text_field :query, placeholder: "search...", class: "w-full rounded", html: { type:"search" } %>
+        <%= form.submit "Search", class: "hidden" %>
+    <% end %>
+</div>

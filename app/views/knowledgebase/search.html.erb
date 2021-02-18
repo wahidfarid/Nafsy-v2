@@ -1,0 +1,13 @@
+<h1 class="mb-8">Knowledgebase - Search Results</h1>
+<h2 class="size-xl">Title results:</h2>
+<%
+    if @title_result.empty?
+%>
+        <h2>No Results</h2>
+<%
+    else
+        @title_result.each { |r| %>
+            <%= link_to r.title,  "knowledgebase/"+r.uuid %>
+        <% }
+    end
+%>
