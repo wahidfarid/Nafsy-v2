@@ -1,5 +1,5 @@
 class KnowledgebaseController < ApplicationController
-  before_action :set_point, only: [:show, :edit]
+  before_action :set_point, only: [:show, :edit, :destroy]
 
   def index
     @count = Point.count
@@ -29,7 +29,7 @@ class KnowledgebaseController < ApplicationController
     @p.links << Point.where(uuid: point_params['links'])
     @p.save
 
-    redirect_to action: 'show', id: @p.uuid
+    redirect_to action: 'show', id: @p.uuid, notice: "Successfully updated point!"
   end
 
   def create
@@ -39,7 +39,12 @@ class KnowledgebaseController < ApplicationController
     @p.links << Point.where(uuid: point_params['links'])
     @p.save
 
-    redirect_to action: 'show', id: @p.uuid
+    redirect_to action: 'show', id: @p.uuid, notice: "Successfully created point!"
+  end
+
+  def destroy
+    @p.destroy
+    redirect_to action: 'index', notice: "Successfully deleted point!"
   end
 
   private
