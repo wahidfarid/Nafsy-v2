@@ -11,10 +11,12 @@ class KnowledgebaseController < ApplicationController
 
   def show
     @p = Point.find(request.params['id'])
+    @links = @p.links.pluck(:title, :uuid)
   end
 
   def edit
     @p = Point.find(request.params['id'])
+    @links = @p.links.pluck(:uuid)
   end
 
   def new
@@ -22,9 +24,11 @@ class KnowledgebaseController < ApplicationController
 
   def update
     @p = Point.find(request.params['id'])
-    @params = params.permit(:title, :content)
+    @params = params.permit(:title, :content, links: [])
     @p.title = @params['title'] if !@params['title'].nil?
     @p.content = @params['content'] if !@params['content'].nil?
+    @p.links = nil
+    @p.links << Point.where(uuid: @params['links'])
     @p.save
 
     render "show"

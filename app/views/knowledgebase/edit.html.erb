@@ -7,6 +7,20 @@
     </div>
 </header>
 
+<!-- Links -->
+<div>
+    <h2 class="text-xl mb-2"> Links </h2>  
+    <%= @p.as_json %>
+    
+    <select class="select2 w-1/2" name="links[]" multiple="multiple">
+        <%  Point.all.each{ |p|  %>
+            <% next if p.uuid == @p.uuid %>
+            <option value="<%= p.uuid %>" <%= @links.include?(p.uuid) ? 'selected="selected"' : '' %> > <%= p.title %> </option>
+        <%  } %>
+    </select>
+
+</div>
+
 <%= form.rich_text_area :content, value: @p.content %>
 
 <% end %>

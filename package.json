@@ -11,8 +11,10 @@
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.4",
+    "jquery": "^3.5.1",
     "npx": "^10.2.2",
     "postcss": "^8.2.6",
+    "select2": "^4.1.0-rc.0",
     "tailwindcss": "^2.0.3",
     "trix": "^1.2.0",
     "turbolinks": "^5.2.0"
