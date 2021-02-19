@@ -6,5 +6,5 @@ class Point
     property :content, default: 'Insert content here'
 
     # Relations
-    has_many :out, :links, type: :LINK, model_class: self, labels: false
+    has_many :both, :links, type: :LINK, model_class: self, labels: false
 end

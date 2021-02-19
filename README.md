@@ -12,6 +12,8 @@ This is also an ideal space for me to try out tools and technologies i haven't u
 
 - Hotwire (test how friendly or easy it is to make a monolithic rails web app without using a frontend framework)
 
+- Tailwind css
+
 ---
 
 This project is dockerized, and should not require any specific library on the host machine.
