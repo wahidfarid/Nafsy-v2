@@ -6,6 +6,18 @@
         <%= form.submit "Create", class:"bg-green-400 hover:bg-green-300 focus:outline-none text-white py-2 px-4 rounded-md size-xl" %>
     </div>
 </header>
+
+<!-- Links -->
+<div class="mb-4">
+    <h2 class="text-xl mb-2"> Links </h2>  
+    <select class="select2 w-1/2" name="links[]" multiple="multiple">
+        <%  Point.all.each{ |p|  %>
+            <option value="<%= p.uuid %>" > <%= p.title %> </option>
+        <%  } %>
+    </select>
+
+</div>
+
 <%= form.rich_text_area :content %>
 
 <% end %>

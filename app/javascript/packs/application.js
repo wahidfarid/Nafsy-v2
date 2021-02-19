@@ -18,9 +18,14 @@ import $ from 'jquery'
 import 'select2'
 import 'select2/dist/css/select2.css'
 
-window.addEventListener('DOMContentLoaded', () => {
+// window.addEventListener('DOMContentLoaded', () => {
+//     $('.select2').select2();
+// })
+document.addEventListener("turbo:load", function() {
+    console.log("turbo loaded");
     $('.select2').select2();
-})
+});
+  
 
 Rails.start()
 ActiveStorage.start()

@@ -17,6 +17,8 @@
 
     <side class="w-64 p-8 bg-blue-100 min-h-screen block">
       <ul>
+        <!-- <li class="hover:text-blue-500 font-semibold"> <%= link_to "Home" , root_url, data: {"turbo-frame": :"body"} %> </li> -->
+        <li class="hover:text-blue-500 font-semibold"> <%= link_to "Home" , root_url %> </li>
         <li class="hover:text-blue-500 font-semibold"> <%= link_to "Knowledgebase" , knowledgebase_index_path %> </li>
       </ul>
     </side>
@@ -24,7 +26,9 @@
     <div class="container mx-auto p-8">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-      <%= yield %>
+       <%#  turbo_frame_tag "body" do %>
+        <%= yield %>
+      <%# end %>
     </div>
 
   </body>
