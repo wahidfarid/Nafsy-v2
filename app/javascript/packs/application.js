@@ -22,7 +22,6 @@ import 'select2/dist/css/select2.css'
 //     $('.select2').select2();
 // })
 document.addEventListener("turbo:load", function() {
-    console.log("turbo loaded");
     $('.select2').select2();
 });
   
