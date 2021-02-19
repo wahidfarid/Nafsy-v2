@@ -29,7 +29,8 @@ class KnowledgebaseController < ApplicationController
     @p.links << Point.where(uuid: point_params['links'])
     @p.save
 
-    redirect_to action: 'show', id: @p.uuid, notice: "Successfully updated point!"
+    flash[:notice] = "Successfully updated point!"
+    redirect_to action: 'show', id: @p.uuid
   end
 
   def create
@@ -39,12 +40,14 @@ class KnowledgebaseController < ApplicationController
     @p.links << Point.where(uuid: point_params['links'])
     @p.save
 
-    redirect_to action: 'show', id: @p.uuid, notice: "Successfully created point!"
+    flash[:notice] = "Successfully created point!"
+    redirect_to action: 'show', id: @p.uuid
   end
 
   def destroy
     @p.destroy
-    redirect_to action: 'index', notice: "Successfully deleted point!"
+    flash[:notice] = "Successfully deleted point!"
+    redirect_to action: 'index'
   end
 
   private
