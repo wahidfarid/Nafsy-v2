@@ -13,8 +13,6 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem "webpacker", github: "rails/webpacker", ref: 'b6c2180'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -27,6 +25,8 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'activegraph', '>= 10.0.0' # For example, see https://rubygems.org/gems/activegraph/versions for the latest versions
 # gem 'neo4j-java-driver', '~> 1.7', '>= 1.7.4'
 gem 'neo4j-ruby-driver' # For example, see https://rubygems.org/gems/neo4j-ruby-driver/versions for the latest versions
+# Hotwire
+gem 'hotwire-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
