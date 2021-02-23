@@ -16,6 +16,20 @@ This is also an ideal space for me to try out tools and technologies i haven't u
 
 ---
 
+## Roadmap
+
+- [ ] Calendar module, displays documents and time-stamped data points for easy reference by date
+- [ ] Optical Character Recognition (OCR) on document images for easy text searches
+- [ ] Create module for documents (for saving documents such as bills and contracts, time stamped, image copies, etc...)
+- [ ] Enumerate or categorize data points
+- [ ] Write unit tests
+- [x] Many-to-Many association of data points
+- [x] Rich text content for data points
+- [x] CRUD Operations for data points in the knowledge base
+- [x] Connect Neo4J with rails
+
+---
+
 This project is dockerized, and should not require any specific library on the host machine.
 
 The ideal environment for this is to be self-hosted for any user who wishes to use the system, and as such their information is not accessible by any other entity and will not experience enough load to warrant consideration regarding scaling.
