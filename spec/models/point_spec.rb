@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Point, type: :model do
   # pending "add some examples to (or delete) #{__FILE__}"
 
-  describe ".new" do 
+  context ".new" do 
     it "is valid with appropriate information" do
       point = Point.new
       point.title = "Demo title 1"
@@ -23,7 +23,7 @@ RSpec.describe Point, type: :model do
     end
   end
 
-  describe ".links" do
+  context ".links" do
     
     subject do
       Point.new(title: "Demo title 1")
@@ -43,7 +43,7 @@ RSpec.describe Point, type: :model do
     end
   end
 
-  describe ".destroy" do 
+  context ".destroy" do 
     it "can be destroyed"
     it "will remove itself from linked points"
     it "will destroy attatched media in rich text content"
