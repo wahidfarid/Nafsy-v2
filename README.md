@@ -22,7 +22,7 @@ This is also an ideal space for me to try out tools and technologies i haven't u
 - [ ] Optical Character Recognition (OCR) on document images for easy text searches
 - [ ] Create module for documents (for saving documents such as bills and contracts, time stamped, image copies, etc...)
 - [ ] Enumerate or categorize data points
-- [ ] Write unit tests
+- [x] Write unit tests
 - [x] Many-to-Many association of data points
 - [x] Rich text content for data points
 - [x] CRUD Operations for data points in the knowledge base
